@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "redux-websocket-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/redux-websocket-middleware.js",
+  "jsnext:main": "dist/redux-websocket-middleware.mjs",
+  "module": "src/index.js",
+  "scripts": {
+    "build": "rollup --config",
+    "start": "rollup --config --watch",
+    "test": "standard"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.1.1",
+    "mock-socket": "^5.0.1",
+    "rollup": "^0.36.3",
+    "rollup-plugin-buble": "^0.14.0",
+    "rollup-watch": "^2.5.0",
+    "standard": "^8.3.0"
+  }
+}
