@@ -1,4 +1,4 @@
-/* global WebSocket */
+/* eslint-env browser */
 const NO_CONNECTION = null
 
 export default createWebsocketMiddleware
@@ -11,7 +11,6 @@ export const ActionTypes = {
 
 export function createWebsocketMiddleware (options = {}) {
   const connections = {}
-  window.connections = connections
 
   return function (store) {
     if (options.defaultEndpoint) {

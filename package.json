@@ -9,7 +9,9 @@
   "scripts": {
     "build": "rollup --config",
     "start": "rollup --config --watch",
-    "test": "standard"
+    "pretest": "npm run build",
+    "test": "standard && mocha --compilers js:buble/register",
+    "prepublish": "npm test"
   },
   "keywords": [],
   "author": "",
