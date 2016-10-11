@@ -1,22 +1,21 @@
 import buble from 'rollup-plugin-buble'
 
-const settings = require('./package.json')
+const pkg = require('./package.json')
 
 export default {
   entry: 'src/index.js',
   plugins: [buble()],
+  sourceMap: true,
   targets: [
     {
-      dest: settings['main'],
+      dest: pkg['main'],
       format: 'umd',
       moduleName: 'ReduxWebsocketMiddleware',
       exports: 'named',
-      sourceMap: true
     },
     {
-      dest: settings['jsnext:main'],
+      dest: pkg['jsnext:main'],
       format: 'es',
-      sourceMap: true
     }
   ]
 }
