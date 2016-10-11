@@ -9,11 +9,16 @@
   "scripts": {
     "build": "rollup --config",
     "start": "rollup --config --watch",
-    "pretest": "yarn run build",
+    "pretest": "npm run build",
     "test": "standard && mocha --compilers js:buble/register",
-    "prepublish": "yarn run test"
+    "prepublish": "npm run test"
   },
-  "keywords": ["redux", "websocket", "middleware", "action"],
+  "keywords": [
+    "redux",
+    "websocket",
+    "middleware",
+    "action"
+  ],
   "author": "Adrian Schaedle",
   "license": "MIT",
   "devDependencies": {

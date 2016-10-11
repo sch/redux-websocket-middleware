@@ -1,6 +1,8 @@
 redux-websocket-middleware
 ==========================
 
+[![build status](https://travis-ci.org/sch/redux-websocket-middleware.svg?branch=master)](https://travis-ci.org/sch/redux-websocket-middleware)
+
 Create actions that dispatch to a websocket. For example:
 
 ```js
