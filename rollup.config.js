@@ -11,11 +11,11 @@ export default {
       dest: pkg['main'],
       format: 'umd',
       moduleName: 'ReduxWebsocketMiddleware',
-      exports: 'named',
+      exports: 'named'
     },
     {
       dest: pkg['jsnext:main'],
-      format: 'es',
+      format: 'es'
     }
   ]
 }
