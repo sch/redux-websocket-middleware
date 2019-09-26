@@ -50,22 +50,21 @@ export function createWebsocketMiddleware (options = {}) {
 
       connections[endpoint] = connection
 
-      connection.onmessage(function (data) {
+      connection.socket.onmessage = function (data) {
         store.dispatch(createMessageAction(endpoint, data))
-      })
+      }
 
-      connection.onopen(function () {
+      connection.socket.onopen = function () {
         store.dispatch(createConnectionAction(endpoint))
-      })
+      }
 
-      connection.onclose(function () {
+      connection.socket.onclose = function () {
         store.dispatch(createDisonnectionAction(endpoint))
-      })
+      }
 
-      connection.onerror(function (error) {
+      connection.socket.onerror = function (error) {
         store.dispatch(createErrorAction(endpoint, error))
-      })
-
+      }
       return connection
     }
 
